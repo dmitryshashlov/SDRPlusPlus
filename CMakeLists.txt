@@ -109,6 +109,9 @@ if (ANDROID)
     set(CMAKE_CXX14_EXTENSION_COMPILE_OPTION "-std=c++17")
 endif (ANDROID)
 
+# Build universal binaries for macOS
+set(CMAKE_OSX_ARCHITECTURES "x86_64;arm64")
+
 # Core of SDR++
 add_subdirectory("core")
 
